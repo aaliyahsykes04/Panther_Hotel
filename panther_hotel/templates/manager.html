@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Reservation List - Panther Hotel {%endblock%}
+{% block content %}
+
+<h1> Reservation List</h1>
+
+<table border="'1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Check-in date</th>
+            <th>Check-out date</th>
+            <th>Room type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in reservations %}
+        <tr>
+            <td>{{r.name}}</td>
+            <td>{{r.checkin_date}}</td>
+            <td>{{r.checkout_date}}</td>
+            <td>{{r.room_type}}</td>
+        </tr>
+            {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ url_for('welcome') }}"<button>Back To Home</button>
+    
+{%endblock%}

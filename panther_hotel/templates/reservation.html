@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %} Reservation - Panther Hotel {% endblock %}
+{% block content %}
+
+<h1> Panther Hotel Room Reservation</h1>
+
+<form method="POST" action="{{ url_for('reserve') }}">
+    <label> Name: <input type="text" name="name" required></label><br>
+    <label> Check-in Date: <input type="date" name="checkin_date" required></label><br>
+    <label> Check-out Date: <input type="date" name="checkout_date" required></label><br>
+    <label> Room Type:
+        <select name="room_type" required>
+            <option value="Classic Room">Classic Room</option>
+            <option value="Deluxe Room">Deluxe Room</option>
+            <option value="Suite">Suite</option>
+        </select>
+    </label><br><br>
+    <button type ="submit">Submit</button>
+</form>
+{% endblock %}

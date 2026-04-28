@@ -1,0 +1,10 @@
+  {% extends 'base.html' %}
+  {% block title%} Welcome - Panther Hotel {%endblock%}
+  {% block content %}
+
+  <h1>Welcome to the Panther Hotel </h1>
+
+  <a href="{{ url_for('reserve') }}"><button> Book a Room </button></a>
+  <a href="{{ url_for ('manager') }}"><button>Manager</button></a>
+
+  {%endblock%}

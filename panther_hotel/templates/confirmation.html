@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Confirmation - Panther Hotel {%endblock%}
+{% block content %}
+
+<h1> Confirmation Page</h1>
+
+<p> Dear {{name}}:</p>
+<p> Thank You for choosing Panther Hotel. We are pleased to confirm your room reservation form {{checkin}} to {{checkout}}.</p>
+<p>We look forward to seeing you soon.</p>
+
+<a href="{{url_for('welcome') }}"><button> Back to Home</a>
+
+
+{%endblock%}
